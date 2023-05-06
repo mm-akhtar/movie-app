@@ -3,6 +3,7 @@ import { Link, Tabs } from 'expo-router';
 import { Pressable, useColorScheme } from 'react-native';
 
 import Colors from '../../constants/Colors';
+import { AntDesign, Ionicons, MaterialIcons } from '@expo/vector-icons';
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
@@ -19,14 +20,16 @@ export default function TabLayout() {
 
   return (
     <Tabs
+
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          headerShown: false,
+          title: 'Home',
+          tabBarIcon: ({ color }) => <AntDesign name="home" color={color} size={24} style={{ marginBottom: -3 }} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -44,10 +47,27 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="coming-soon"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          headerShown: false,
+          title: 'Coming Soon',
+          tabBarIcon: ({ color }) => <MaterialIcons name="video-library" color={color} size={24} style={{ marginBottom: -3 }} />,
+        }}
+      />
+      <Tabs.Screen
+        name="search"
+        options={{
+          headerShown: false,
+          title: 'Search',
+          tabBarIcon: ({ color }) => <Ionicons name="search" color={color} size={24} style={{ marginBottom: -3 }} />,
+        }}
+      />
+      <Tabs.Screen
+        name="download"
+        options={{
+          headerShown: false,
+          title: 'Download',
+          tabBarIcon: ({ color }) => <AntDesign name="download" color={color} size={24} style={{ marginBottom: -3 }} />,
         }}
       />
     </Tabs>
