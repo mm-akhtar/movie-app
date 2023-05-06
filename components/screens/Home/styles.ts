@@ -3,19 +3,24 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+        height: 'auto'
     },
     title: {
-        fontSize: 20,
+        fontSize: 40,
+        textTransform: 'uppercase',
+        letterSpacing: 4,
         fontWeight: 'bold',
         color: '#fff',
+        marginTop: 'auto',
+        marginBottom: 'auto',
+        alignSelf: 'center'
     },
-    separator: {
-        marginVertical: 30,
-        height: 1,
-        width: '80%',
-    },
+    header: {
+        height: 200,
+        paddingTop:50,
+        backgroundColor: 'rgba(143,7,14,0.2)',
+        marginBottom:20
+    }
 })
 
 export default styles

@@ -1,11 +1,10 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { FlatList, Image, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import styles from './styles';
-
 const ComingSoonPage = () => {
+
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Coming Soon</Text>
-            <Image source={{ uri: 'https://pbs.twimg.com/media/Ec_7SzOUEAAuGit.jpg' }} style={styles.poster} />
+            <Text style={styles.title}> Coming Soon</Text>
         </View>
     )
 }

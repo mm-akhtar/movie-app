@@ -6,19 +6,21 @@ const styles = StyleSheet.create({
         // alignItems: 'flex-start',
         // justifyContent: 'center',
         // paddingTop: 50,
-        // backgroundColor: '#ff000030'
+        paddingLeft: 10,
+        marginBottom: 20
     },
     title: {
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: 'bold',
         color: '#fff',
+        marginBottom: 7
     },
     poster: {
         width: 110,
         height: 180,
-        resizeMode:'cover',
+        resizeMode: 'cover',
         borderRadius: 5,
-        margin:5
+        margin: 5
     },
     separator: {
         marginVertical: 30,
