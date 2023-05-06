@@ -11,6 +11,11 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#fff',
     },
+    poster: {
+        height: 400,
+        width: 200,
+        borderRadius: 5,
+    },
     separator: {
         marginVertical: 30,
         height: 1,
