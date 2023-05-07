@@ -1,5 +1,8 @@
 import { API_KEY } from '@env';
 console.log(API_KEY)
+const fetchById = (id: string) => {
+    return `movie/${id}?api_key=${API_KEY}&append_to_response=videos`
+}
 const feRequests = {
     fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
     fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
@@ -17,6 +20,7 @@ const feRequests = {
     fetchComedyShows: `discover/tv?api_key=${API_KEY}&with_genres=35`,
     fetchCrimeShows: `discover/tv?api_key=${API_KEY}&with_genres=80`,
     fetchScifiShows: `discover/tv?api_key=${API_KEY}&with_genres=10765`,
+    fetchById: fetchById
 };
 
 export default feRequests;
